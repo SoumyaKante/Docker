@@ -1,0 +1,58 @@
+1) docker –version  --> This command is used to get the currently installed version of docker
+
+2) docker pull  --> This command is used to pull images from the docker repository(hub.docker.com)
+   Usage: docker pull <image name>
+
+3) docker run  -->  This command is used to create a container from an image
+   Usage: docker run -it -d <image name>
+
+4) docker ps  or docker container ls -->  This command is used to list the running containers
+
+5) docker ps -a or docker container ls -a -->  This command is used to show all the running and exited containers
+
+6) docker exec  -->  This command is used to access the running container
+   Usage: docker exec -it <container-id> bash
+
+7) docker stop  -->  This command stops a running container
+   Usage: docker stop <container-id>
+
+8) docker kill  -->  This command kills the container by stopping its execution immediately. 
+   The difference between ‘docker kill’ and ‘docker stop’ is that ‘docker stop’ gives the container time to shutdown gracefully,
+   in situations when it is taking too much time for getting the container to stop, one can opt to kill it 
+   Usage: docker kill <container id>
+
+9) docker commit  -->  This command creates a new image of an edited container on the local system
+   Usage: docker commit <conatainer id> <username/imagename>
+
+10) docker login  -->  This command is used to login to the docker hub repository
+
+11) docker push  -->  This command is used to push an image to the docker hub repository
+    Usage: docker push <username/image name>
+
+12) docker images  or docker image ls -->  This command lists all the locally stored docker images
+
+13) docker rm  -->  This command is used to delete a stopped container
+    Usage: docker rm <container-id>
+
+14) docker rmi  -->  This command is used to delete an image from local storage
+    Usage: docker rmi <image-id>
+
+15) docker build  -->  This command is used to build an image from a specified docker file
+    Usage: docker build <path to docker file>
+    
+16) docker logs <container_name> -->  Displays the logs of the docker container with container id mentioned in the command.
+    Usage: docker logs <container-id>
+    
+17) docker logout  -->  This command is used to logout from docker hub repository
+
+18) docker stats <container_name/id> ----> Display real-time container resource usage.
+
+19) docker restart <container_name/id> ---> Rstart a  container.
+
+20) docker info ---> Display system wide information about docker.
+
+21) sudo lsof -i :80 ----> This will show you the process ID (PID) of the program using port 80. 
+
+22) sudo kill -9 <PID> ---> if the process using port 80 is not needed, you can stop it.Replace <PID> with the actual process ID you obtained from the lsof command.
+
+23) docker run -d --name nginx1 -p 8080:80 webapp1:latest --> This will map port 8080 on your host to port 80 in the container.

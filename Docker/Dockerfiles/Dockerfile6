@@ -1,0 +1,18 @@
+# Use a base image with Nginx
+FROM nginx:latest
+
+# Create a directory for the cloned repository
+RUN mkdir /test
+
+# Copy the repository files from the local system to the container
+COPY . /test
+
+# Move the repository files to the web server directory for Nginx
+RUN mv /test/* /usr/share/nginx/html/
+
+# Expose port 80
+EXPOSE 80
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
+
